@@ -16,6 +16,23 @@ public class LLine {
 	
 	public void process() throws LSystemSymbolException, LSystemLengthException {
 		
+		try {
+			for (LRule rule : rules) {
+			
+			String match = String.valueOf(rule.getMatch());
+			String body = rule.getBody().toString();
+			String s = line.toString();	
+			
+			if (s.equals(match)) {
+				
+				s.replaceAll(match, body);
+				
+				this.line = s.toCharArray();
+				}
+			}
+	    } catch ()
+		
+		
 	}
 	
 	
